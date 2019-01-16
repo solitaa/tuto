@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+
+Route::get('/', 'TasksController@home');
+//Route::get('tasks/create', 'TasksController@create');
+//Route::post('tasks', 'TasksController@store');
+
+Route::resource('tasks', 'TasksController');
